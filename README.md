@@ -16,7 +16,7 @@ and displays ten random bookmarks from your Pinboard library. That's it.
 
 ## Usage
 This extension will be available soon on the Chrome Webstore. You can also
-install it by following these step - 
+install it by following these steps - 
 1. Download the repository as a zip file
 2. Extract the zip
 3. On Chrome, type `chrome://extensions` in the address bar and hit enter
