@@ -8,6 +8,7 @@ only to never see them again. The extension is very simple and
 small (<120 lines of plain JavaScript). It takes over your new tab 
 and displays ten random bookmarks from your Pinboard library. That's it.  
 
+
 ## Screenshot
 
 <img src="images/screen.png" height="500px">
@@ -34,3 +35,7 @@ To get the API token -
 Paste the token into the prompt on the new tab, and you're done! The first time you
 login, it may take a few seconds to fetch the bookmarks and store them locally.
 Subsequent loads should be instant. 
+
+# Privacy 
+All data is cached locally and resides inside your browser. There are no network 
+calls except for fetching the bookmarks from Pinboard API.
