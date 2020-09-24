@@ -1,0 +1,23 @@
+{
+ 	"manifest_version": 2,
+ 	"name": "Pinrecall",
+ 	"version": "1.0",
+	"description": "Rediscover ten random Pinboard bookmarks every time you open a new tab. Open-source.",
+	"icons": {
+		"16": "images/pinlogo_ab.png",
+		"48": "images/pinlogo_ab.png"
+	},
+	"chrome_url_overrides" : {
+		"newtab": "index.html"
+	},
+	"background": {
+		"scripts": [
+			"scripts/background.js"
+		]
+	},
+	"permissions": [
+		"tabs",
+    "https://api.pinboard.in/"
+  ]
+}
+	
