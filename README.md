@@ -15,6 +15,8 @@ and displays ten random bookmarks from your Pinboard library. That's it.
 
 
 ## Usage
+This extension will be available soon on the Chrome Webstore. You can also
+install it by following these step - 
 1. Download the repository as a zip file
 2. Extract the zip
 3. On Chrome, type `chrome://extensions` in the address bar and hit enter
@@ -36,6 +38,6 @@ Paste the token into the prompt on the new tab, and you're done! The first time 
 login, it may take a few seconds to fetch the bookmarks and store them locally.
 Subsequent loads should be instant. 
 
-# Privacy 
+## Privacy 
 All data is cached locally and resides inside your browser. There are no network 
 calls except for fetching the bookmarks from Pinboard API.
