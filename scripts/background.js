@@ -9,20 +9,21 @@ function send(msg) {
 }
 
 function fetchAndSend(msg) {
+  send({tabId: msg, status: 'FETCHING'});
   let url = _url + localStorage.getItem('apiKey');
   fetch(url, options).then(response => response.json())
     .then(data => {
       send({
         links: data,
-        tabId: msg
+        tabId: msg,
+        status: 'FETCHED'
       });
       localStorage.setItem('pinData', JSON.stringify(data));
     })
-    .catch((error) => console.log(error))
+    .catch((error) => send({tabId: msg, status: 'ERROR'}));
 }
 
 chrome.runtime.onStartup.addListener(function () {
-  console.log("STRART");
   localStorage.removeItem('pinData');
   fetchAndSend();
 });

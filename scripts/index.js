@@ -38,11 +38,22 @@ function reset() {
 
 chrome.runtime.onMessage.addListener(
   function (req, sender, sendResponse) {
-    console.log(req);
+    if(req.status != 'FETCHED' && tabId == req.tabId){
+      var cont = document.getElementById('content');
+      var statusMsg = document.createElement('p');
+      statusMsg.id = 'status';
+      if(req.status == 'FETCHING'){
+        statusMsg.innerHTML = 'Fetching bookmarks...'
+      } else {
+        statusMsg.innerHTML = 'Something went wrong :(';
+      }
+      cont.appendChild(statusMsg);
+    }
     if (localStorage.getItem('apiKey') != null && tabId == req.tabId) {
       var links = req.links;
       links = randomSample(links, 10);
       var cont = document.getElementById('content');
+      cont.innerHTML = '';
       for (var c in links) {
         var linkDiv = document.createElement('div');
         var desc = document.createElement('a');

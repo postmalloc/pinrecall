@@ -84,3 +84,7 @@ button {
     opacity: 100%;
     cursor: pointer;
 }
+
+#status{
+    color: #d8d8d6;
+}
